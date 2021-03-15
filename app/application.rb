@@ -18,7 +18,7 @@ class Application
       if @@cart == []
         resp.write "Your cart is empty"
       else
-        resp.write "#{@@cart.join('')}"
+        resp.write "#{@@cart.join('\n').chomp}"
       end
     elsif req.path.match(/add/)
       search_item = req.params["q"]
